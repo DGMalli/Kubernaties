@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkinspod
+  namespace: malli
+  labels:
+    app: jenkins
+spec:
+  containers:
+    - name: jenkins-cont
+      image: jenkins/jenkins:lts

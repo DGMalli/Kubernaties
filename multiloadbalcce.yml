@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lbnewlatest
+spec:
+  type: LoadBalancer
+  selector:
+    app: jenkinsnginx
+  ports:
+    - name: nginx
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: jenkins
+      protocol: TCP
+      port: 8060
+      targetPort: 8080
